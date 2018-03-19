@@ -8,12 +8,12 @@ namespace HackerRank
     {
         private int Chanllange(string s)
         {
-            var counter = s.Length > 0 ? 1 : 0; 
+            var counter = s.Length > 0 ? 1 : 0;
             foreach (var c in s)
             {
                 if (char.IsUpper(c))
                 {
-                    counter++; 
+                    counter++;
                 }
             }
             return counter;

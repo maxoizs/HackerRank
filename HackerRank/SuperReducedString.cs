@@ -12,15 +12,15 @@ namespace HackerRank
         {
             var result = new List<char>();
 
-            for(var x =0; x<s.Length; x++)
-            {                
-                if(x < s.Length - 1 && s[x]==s[x+1])                
+            for (var x = 0; x < s.Length; x++)
+            {
+                if (x < s.Length - 1 && s[x] == s[x + 1])
                 {
-                    x += 1; 
+                    x += 1;
                 }
                 else
-                {                   
-                    if(result.Any() && result.Last() == s[x])
+                {
+                    if (result.Any() && result.Last() == s[x])
                     {
                         result.RemoveAt(result.Count - 1);
                     }
@@ -32,13 +32,13 @@ namespace HackerRank
             }
             var output = string.Join(string.Empty, result);
 
-            return output==string.Empty? "Empty String": output; 
+            return output == string.Empty ? "Empty String" : output;
         }
 
 
         [TestCase("dcabaabacd", "Empty String")]
         [TestCase("baab", "Empty String")]
-        [TestCase("aa","Empty String")]
+        [TestCase("aa", "Empty String")]
         [TestCase("i", "i")]
         [TestCase("iiiiiii", "i")]
         [TestCase("aaabccddd", "abd")]
